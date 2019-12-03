@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.card-wine {
+  width: 24rem;
+  padding: 1rem;
+  margin: 1rem;
+ 
+}
+
+.card-body-wine {
+  background-color: cornflowerblue;
+  
+}

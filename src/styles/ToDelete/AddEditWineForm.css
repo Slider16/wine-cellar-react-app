@@ -1,0 +1,27 @@
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+    background-color: burlywood;
+}
+
+.AddEditWineForm {
+    width: 80%;
+    margin: 50px 10%; 
+    padding: 3em;
+    background-color: aliceblue;   
+    border-color: rgb(20, 162, 206);
+    border-width: .25em;
+    border-style: solid;
+    overflow: auto;
+}
+
+.AddEditWineForm__input {
+    margin-bottom: 20px;
+    font-size: .7em;
+}
+
+.AddEditWineForm__input > label {
+    display: block;
+    font-size: .7em;
+}
+
