@@ -5,7 +5,8 @@ function Header() {
   //   const activeStyle = { color: "orange" };
   return (
     <nav>
-      <a href="/">Home</a> | <a href="/wines">Wines</a> |{" "}
+      <a href="/">Home</a> | <a href="/wines">Wines</a> | <a href="/addeditwine">Add Edit Wines</a> |
+      
       <a href="/about">About</a>
     </nav>
 

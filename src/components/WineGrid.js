@@ -1,10 +1,12 @@
 import React from 'react';
 
 
-function WineGrid(data) {
+function WineGrid(props) {
   return (
+    
 
     <div id="wineGrid">
+      
       <table className="table table-striped">
         <thead className="thead-dark">
           <tr>
@@ -15,17 +17,20 @@ function WineGrid(data) {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>{data.name}</td>
-            <td></td>
-            <td></td>
-            <td></td>
+        {props.wines.map(wine => (
+          <tr key={wine._id}>
+            <td>{wine.name}</td>
+            <td>{wine.vineyard}</td>
+            <td>{wine.year}</td>
+            <td>{wine.bin}</td>
           </tr>
+          ))}
         </tbody>
       </table>
+        
     </div>
 
-  )
+    )
 }
 
 export default WineGrid;
