@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+// import { createSlug } from "../utils";
 
 function WineList(props) {
   return (
@@ -32,22 +33,21 @@ function WineList(props) {
             </div>
             <div className="col-md-8">
               <div className="card">
-                <div
-                  className="card-body-wine card-wine"
-                  key={wine._id.toString()}
-                >
+                <div className="card-body-wine card-wine" key={wine._id}>
                   <div className="card-title">
                     <h5 className="card-title">
-                      <a href={wine.links.self}>{wine.name}</a>
+                      <Link to={"/editwines/" + wine.slug}>{wine.name}</Link>
+                      {/* <a href={wine.links.self}>{wine.name}</a> */}
                     </h5>
                     <h6 className="card-subtitle mb-2 text-muted">
-                      <a
+                      {/* <a
                         href={wine.links.FilterByThisVineyard}
                         target="_blank"
                         rel="noopener noreferrer"
-                      >
-                        {wine.vineyard}
-                      </a>
+                      > */}
+                      {/* {wine.vineyard}
+                      </a> */}
+                      {wine.vineyard}
                     </h6>
                     <p className="card-text">{wine.notes}</p>
                     <button
@@ -56,9 +56,6 @@ function WineList(props) {
                     >
                       Delete
                     </button>
-                    <Link to={wine.links.self} target="_blank">
-                      {wine.name}
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -77,6 +74,7 @@ WineList.propTypes = {
       _id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       vineyard: PropTypes.string,
+      slug: PropTypes.string,
       notes: PropTypes.string
     })
   )

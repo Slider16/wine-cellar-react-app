@@ -3,10 +3,10 @@ import * as wineApi from "../api/wineApi";
 import actionTypes from "./actionTypes";
 
 export function saveWine(wine) {
-  return wine.saveWine(wine).then(savedWine => {
+  return wineApi.saveWine(wine).then(savedWine => {
     // Hey dispatcher, go tell ALL THE STORES that a Wine was just created.
     dispatcher.dispatch({
-      actionType: wine.id ? actionTypes.UPDATE_WINE : actionTypes.CREATE_WINE,
+      actionType: wine._id ? actionTypes.UPDATE_WINE : actionTypes.CREATE_WINE,
       wine: savedWine
     });
   });

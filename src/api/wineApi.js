@@ -12,7 +12,7 @@ export function getWineBySlug(slug) {
     .then(response => {
       if (!response.ok) throw new Error("Network response was not ok.");
       return response.json().then(wines => {
-        if (wines.length !== 1) throw new Error("Course not found: " + slug);
+        if (wines.length !== 1) throw new Error("Wine not found: " + slug);
         return wines[0];
       });
     })
@@ -20,14 +20,11 @@ export function getWineBySlug(slug) {
 }
 
 export function saveWine(wine) {
-  return fetch(baseUrl + (wine.id || ""), {
-    method: wine.id ? "PUT" : "POST",
+  let bodystring = JSON.stringify({ ...wine });
+  return fetch(baseUrl + (wine._id || ""), {
+    method: wine._id ? "PUT" : "POST",
     headers: { "content-type": "application/json" },
-    body: JSON.stringify({
-      ...wine,
-      // Parse the wineId to a number (in case it was sent as a string).
-      wineId: parseInt(wine.id, 10)
-    })
+    body: bodystring
   })
     .then(handleResponse)
     .catch(handleError);

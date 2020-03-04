@@ -25,14 +25,18 @@ function NavBar() {
               </a>
             </li>
             <li className="nav-item">
-              <Link to="/add" className="nav-link">
-                Add/Edit Wines
+              <Link to="/wines" className="nav-link">
+                Wine List
               </Link>
-              {/* <a class="nav-link" href="/">Edit Wines</a> */}
             </li>
             <li className="nav-item">
-              <Link to="/wineList" className="nav-link">
-                Wine List
+              <Link to="/editwines" className="nav-link">
+                Edit Wines
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/about" className="nav-link">
+                About
               </Link>
             </li>
             <li className="nav-item">
