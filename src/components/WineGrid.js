@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-// import { createSlug } from "../utils";
 
 function WineGrid(props) {
   return (
@@ -20,7 +19,6 @@ function WineGrid(props) {
           {props.wines.map(wine => (
             <tr key={wine._id}>
               <td>
-                {/* <Link to={"/editwines/" + createSlug(wine.name)}> */}
                 <Link to={"/editwines/" + wine.slug}>{wine.name}</Link>
               </td>
               <td>{wine.vineyard}</td>
@@ -40,14 +38,6 @@ function WineGrid(props) {
       </table>
     </div>
   );
-}
-
-// Returns a URL friendly slug
-export function createSlug(value) {
-  return value
-    .replace(/[^a-z0-9_]+/gi, "-")
-    .replace(/^-|-$/g, "")
-    .toLowerCase();
 }
 
 WineGrid.propTypes = {

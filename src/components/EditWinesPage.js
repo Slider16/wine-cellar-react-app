@@ -23,7 +23,6 @@ const EditWinesPage = props => {
     wineStore.addChangeListener(onChange);
     const slug = props.match.params.slug; // from the path '/wines/:slug'
 
-    // if (wineStore.getWines().length === 0) {
     if (wines.length === 0) {
       wineActions.loadWines();
     } else if (slug) {

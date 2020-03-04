@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import wineStore from "../stores/wineStore";
 import WineList from "./WineList";
-// import { Link } from "react-router-dom";
 import { loadWines, deleteWine } from "../actions/wineActions";
 
 function WinesPage() {
