@@ -1,3 +1,5 @@
+This is the REACT front-end that goes along with my NodeJS API back-end.  Another area I use for studying when I want to switch away from C# for a while.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
